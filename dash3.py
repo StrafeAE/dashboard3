@@ -1,11 +1,10 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import xlrd
 
 
 st.title(" :bar_chart: Sample SuperStore EDA")
-df = pd.read_excel("superstore.xls", engine='xlrd')
+df = pd.read_excel("superstore.xls")
 
 col1, col2 = st.columns((2))
 df["Order Date"] = pd.to_datetime(df["Order Date"])
